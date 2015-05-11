@@ -1,5 +1,4 @@
 # TemPS3
-(by SnipeLike, 12.12.14)
 
 PS3 Temperature Monitoring.
 A simple tool to monitor you PS3 CPU & GPU Temperature with CCAPI.
@@ -31,3 +30,5 @@ filed "Refresh value" and hit the "Set" Button below. The CPU & GPU Temperature 
 
 # COPYRIGHT
 2014, SnipeLike
+
+12.12.2014, SL
