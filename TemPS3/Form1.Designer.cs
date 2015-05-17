@@ -118,7 +118,7 @@
             this.L_version.Padding = new System.Windows.Forms.Padding(2);
             this.L_version.Size = new System.Drawing.Size(124, 17);
             this.L_version.TabIndex = 5;
-            this.L_version.Text = "Version:  0.2";
+            this.L_version.Text = "Version:  0.2.1";
             this.L_version.Click += new System.EventHandler(this.L_version_Click);
             // 
             // L_gputemp_show

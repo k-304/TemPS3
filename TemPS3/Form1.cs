@@ -120,7 +120,7 @@ namespace TemPS3
                 //Start Backgroundworker to refresh PS Status
                 BW_psdata.RunWorkerAsync();
             }
-            get_psdata();
+            //get_psdata();
         }
 
         //Status "Connected!" / "Not Connected!"
@@ -156,7 +156,10 @@ namespace TemPS3
             //Backgroundworker
             InitializeComponent();
             BW_connect.DoWork += new DoWorkEventHandler(BW_connect_DoWork);
-            BW_psdata.DoWork += new DoWorkEventHandler(BW_psdata_DoWork);
+
+            BW_psdata = new BackgroundWorker();
+            BW_psdata.DoWork += BW_psdata_DoWork; //Special initialize option to fix "fireing twice" effect when
+                                                  //starting from timer1_tick
             
             //Show Version in Titlebar (Update in AssemblyInfo.cs)
             var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
@@ -321,6 +324,12 @@ namespace TemPS3
                 }
                 else
                 {
+                    /*if (timer1.Enabled)
+                    {
+                        //Stop timer1 if it is runnung to set a new refresh delay
+                        timer1.Stop();
+                        MessageBox.Show("Timer Stopped");
+                    }*/
                     //Call Function
                     refresh_delay();
                 }
@@ -427,6 +436,7 @@ namespace TemPS3
         {
             psstatus = PS3.GetConnectionStatus();
             get_psdata();
+            MessageBox.Show("Start get_psdata");
         }
 
         //BW_psdata
