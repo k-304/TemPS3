@@ -18,12 +18,15 @@ If your PS3's connected, you can activate the automatic update function by setti
 filed "Refresh value" and hit the "Set" Button below. The CPU & GPU Temperature will be updated all X seconds.
 
 # Bugs
-- TemPS3 craches by updating temp -- Fixed in Version 0.1.0
-- TemPS3 freezes while connecting to false PS3 IP -- Fiexed in Version 0.1.1
-- TemPS3 freezes after PS3 shutdown -- Fixed in Version 0.2
+| Bug           | Fixed          | in Version  |
+| ------------- |:--------------:| -----------:|
+| TemPS3 craches by updating temp | Fixed | 0.1.0 |
+| TemPS3 freezes while connecting to false PS3 IP | Fiexed | 0.1.1 |
+| TemPS3 freezes after PS3 shutdown | Fixed | 0.2 |
+| Problems by updating "Refresh Value" when timer is already running | not Fixed | - |
 
 # In next Update
-- Release Version 1.0
+- Fix for updating "Refresh Value"
 - Update Tool, automatic Update Check
 
 # COPYRIGHT
